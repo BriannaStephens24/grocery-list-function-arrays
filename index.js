@@ -37,7 +37,7 @@ const getUpperCaseNames = (array) => {
   const upperArray = array.map((array) => array.name.toUpperCase());
   return upperArray;
 
-  // .map returns a new array with whateve is returned from the function
+  
 
 }
 
@@ -66,15 +66,15 @@ Returns the price of the item that matches the name that was passed in.
 Hint: use a loop */
 
 const getItemPriceByName = (array, foodName) => {
-  // loop through array
+  
   for (let i = 0; i < array.length; i++) {
-    // compare index value to passed in food name
+   
     if (array[i].name === foodName) {
-      // return the price at the same index as the food name if matched
+   
       return array[i].price;
     }
   }
-  // seperate return if no food name matches
+
   return `Item not found`;
 }
 //                                                example grocery
@@ -102,14 +102,14 @@ Returns the total quantity of all items.
 Hint: use .reduce */
 
 const countItems = (array) => {
-  // create empty array
+ 
   const quanityArray = [];
-  // Add quanity values to own array
+
   for (let i = 0; i < array.length; i++) {
-    // push each value to the empty array
+   
     quanityArray.push(array[i].quantity);
   }
-  // Use reduce to add the values of the now full array
+  
   const quanityCount = quanityArray.reduce((acc, cur) => acc + cur, 0)
   return quanityCount;
 }
@@ -124,14 +124,14 @@ Returns the cost of all given items.
 Hint: use .reduce */
 
 const calculateTotalPrice = (array) => {
-  // create empty array
+  
   const priceArray = [];
-  // loop through array
+ 
   for (let i = 0; i < array.length; i++) {
-    // push the quanity value * price value
+    
     priceArray.push(array[i].price * array[i].quantity);
   }
-  // use reduce to add the total price of the now full array
+ 
   const totalPrice = priceArray.reduce((acc, cur) => acc + cur, 0);
   return totalPrice;
 }
